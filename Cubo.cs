@@ -21,5 +21,12 @@ public class Cubo : MonoBehaviour
 
         rb.AddForce(new Vector3(horizontal, 0 , vertical) * force);
     }
-    private void onCollisionEnter(); 
+    private void OnCollisionEnter(Collision collision)
+    {
+        OutroCubo outroCubo = collision.gameObject.GetComponent<OutroCubo>();
+        if(outroCubo != null)
+        {
+            outroCubo.health -= 10;
+        }
+    }
 }
