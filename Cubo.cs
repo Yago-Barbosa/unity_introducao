@@ -26,7 +26,7 @@ public class Cubo : MonoBehaviour
         OutroCubo outroCubo = collision.gameObject.GetComponent<OutroCubo>();
         if(outroCubo != null)
         {
-            outroCubo.health -= 10;
+            outroCubo.health -= 50;
         }
     }
 }
